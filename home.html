@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raihan Aditya Pratama Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#333;
+transition:.4s;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#ff4f8b;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4f8b;
+}
+
+#darkBtn{
+border:none;
+background:#ff4f8b;
+color:white;
+padding:10px 15px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+background:linear-gradient(135deg,#ffd6e7,#fff0f6);
+}
+
+.hero-text{
+width:50%;
+}
+
+.hero-text h4{
+letter-spacing:4px;
+color:#777;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:80px;
+line-height:1;
+color:#ff4f8b;
+}
+
+.hero-text h2{
+margin-top:10px;
+font-size:30px;
+}
+
+.hero-text p{
+margin-top:20px;
+line-height:1.8;
+max-width:500px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#ff4f8b;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(255,79,139,.4);
+}
+
+.hero-img{
+position:relative;
+}
+
+.hero-img::before{
+content:'';
+position:absolute;
+width:420px;
+height:420px;
+background:#ffb6d5;
+border-radius:50%;
+filter:blur(70px);
+opacity:.6;
+z-index:-1;
+top:-20px;
+right:-20px;
+}
+
+.hero-img img{
+width:380px;
+height:380px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.hero-img img:hover{
+transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:42px;
+color:#ff4f8b;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* SCROLL ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(60px);
+transition:all 1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FOOTER */
+
+footer{
+background:#ff4f8b;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* DARK MODE */
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark nav{
+background:#1b1b1b;
+}
+
+.dark nav a{
+color:white;
+}
+
+.dark .logo{
+color:#ff69b4;
+text-shadow:
+0 0 10px #ff69b4,
+0 0 20px #ff69b4,
+0 0 40px #ff69b4;
+}
+
+.dark .hero{
+background:linear-gradient(135deg,#161616,#252525);
+}
+
+.dark .card{
+background:#222;
+color:white;
+}
+
+.dark .btn{
+box-shadow:
+0 0 10px #ff69b4,
+0 0 20px #ff69b4;
+}
+
+.dark .hero-img::before{
+background:#ff69b4;
+opacity:.3;
+}
+
+.dark footer{
+background:#1b1b1b;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+padding-top:120px;
+}
+
+.hero-text{
+width:100%;
+}
+
+.hero-text h1{
+font-size:50px;
+}
+
+.hero-text h2{
+font-size:24px;
+}
+
+.hero-img img{
+width:250px;
+height:250px;
+margin-bottom:30px;
+}
+
+.hero-img::before{
+width:280px;
+height:280px;
+left:0;
+right:0;
+margin:auto;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-left">
+
+<div class="logo">Raihan Aditya Pratama</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+<button id="darkBtn">🌙</button>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h4>HALO AKU</h4>
+
+<h1>Raihan Aditya Pratama</h1>
+
+<h2>Seorang Siswa Dari SMKN 2 BANJARMASIN</h2>
+
+<p>
+Aku Sedang Belajar Membuat Portofolio Dan Memahami CSS Dan HTML Dan JavaScript
+Terus,Aku Seolah Di SMKN 2 BANJARMASIN Dengan Jurusan TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI 
+Dan Berada Di Kelas XII TJKT B.
+Senang Bisa Mengenal Mu
+</p>
+
+<a href="#about" class="btn">
+Explore More →
+</a>
+
+</div>
+
+<div class="hero-img">
+<img src="https://cdn.phototourl.com/free/2026-06-25-9797ee5f-a6cb-4fdb-b2ff-adfe16b12598.jpg" alt="Foto Saya">
+</div>
+
+</section>
+
+<section id="about" class="hidden">
+
+<div class="title">
+<h2>About Me</h2>
+</div>
+
+<p>
+Halo! Saya Seorang Siswa Dari SMKN 2 BANJARMASIN Dengan Jurusan TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI Saya Sekarang Berumur 17 Tahun Hobi Saya Yaitu Badminton Dan Mendaki
+Cita Cita Saya Menjadi Pengusaha Dan Saya Lahir Di BANJARMASIN Pada Tanggal 07-12-2008 Mungkin Itu Saja Tentang Diri Saya.
+</p>
+
+</section>
+
+<section id="skills" class="hidden">
+
+<div class="title">
+<h2>Skills</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Topologi FTTH</h3>
+<p>Menyambung Kabel Fiber Atau Kabel KU</p>
+<p>Konfigurasi Mikrotik Dan CCTV</p>
+</div>
+
+<div class="card">
+<h3>Software</h3>
+<p>Install Ulang PC</p>
+<p>Memahami Debian Server</p>
+<p>Memahami Cloud AWS</p>
+</div>
+
+<div class="card">
+<h3>Hardware</h3>
+<p>Me Rakit PC</p>
+<p>Cleaning PC</p>
+<p>Re-Pasta PC</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="hidden">
+
+<div class="title">
+<h2>Projects</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>GITHUB</h3>
+<p>Membuat Akun GITHUB Yang Aktif</p>
+</div>
+
+<div class="card">
+<h3>Cloud AWS</h3>
+<p>Memahami Machine Learning</p>
+</div>
+
+<div class="card">
+<h3>Debian Server</h3>
+<p>Memahami Dasar Server</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="hidden">
+
+<div class="title">
+
+<div class="title">
+<h2>Contact</h2>
+</div>
+
+<div class="card" style="max-width:500px;margin:auto;text-align:center;">
+<p>📧 Email: adityaraihan888@gmail.com</p>
+<p>📱 Instagram: @han.ap_</p>
+<p>💬 Tiktok: synctink</p>
+</div>
+
+</section>
+
+</section>
+
+<footer>
+© 2026 Raihan Portfolio
+</footer>
+
+<script>
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+hiddenElements.forEach(el=>{
+observer.observe(el);
+});
+
+const btn = document.getElementById("darkBtn");
+
+btn.addEventListener("click",()=>{
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+btn.innerHTML="☀️";
+}else{
+btn.innerHTML="🌙";
+}
+
+});
+
+</script>
+
+</body>
+</html>

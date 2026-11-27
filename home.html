@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -27,7 +26,6 @@ transition:.4s;
 }
 
 /* NAVBAR */
-
 nav{
 position:fixed;
 top:0;
@@ -81,7 +79,6 @@ font-size:18px;
 }
 
 /* HERO */
-
 .hero{
 min-height:100vh;
 display:flex;
@@ -167,7 +164,6 @@ transform:scale(1.05);
 }
 
 /* SECTION */
-
 section{
 padding:100px 8%;
 }
@@ -202,7 +198,6 @@ box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
 /* SCROLL ANIMATION */
-
 .hidden{
 opacity:0;
 transform:translateY(60px);
@@ -215,7 +210,6 @@ transform:translateY(0);
 }
 
 /* FOOTER */
-
 footer{
 background:#ff4f8b;
 color:white;
@@ -224,7 +218,6 @@ padding:25px;
 }
 
 /* DARK MODE */
-
 .dark{
 background:#121212;
 color:white;
@@ -271,9 +264,7 @@ background:#1b1b1b;
 }
 
 /* MOBILE */
-
 @media(max-width:768px){
-
 .hero{
 flex-direction:column-reverse;
 text-align:center;
@@ -309,150 +300,113 @@ margin:auto;
 nav ul{
 display:none;
 }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-
 <div class="nav-left">
-
 <div class="logo">Raihan Aditya Pratama</div>
-
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </div>
-
 <button id="darkBtn">🌙</button>
-
 </nav>
 
 <section class="hero">
-
 <div class="hero-text">
-
 <h4>HALO AKU</h4>
-
 <h1>Raihan Aditya Pratama</h1>
-
 <h2>Seorang Siswa Dari SMKN 2 BANJARMASIN</h2>
-
 <p>
 Aku Sedang Belajar Membuat Portofolio Dan Memahami CSS Dan HTML Dan JavaScript
-Terus,Aku Seolah Di SMKN 2 BANJARMASIN Dengan Jurusan TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI 
+Terus,Aku Sekolah Di SMKN 2 BANJARMASIN Dengan Jurusan TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI
 Dan Berada Di Kelas XII TJKT B.
 Senang Bisa Mengenal Mu
 </p>
-
 <a href="#about" class="btn">
 Explore More →
 </a>
-
 </div>
 
 <div class="hero-img">
-<img src="https://img.sanishtech.com/u/69953875b8009a296ea6081e2b2190f5.jpg" alt="Foto Saya">
+<img src="foto-raihan.jpg" alt="Foto Saya">
 </div>
-
 </section>
 
 <section id="about" class="hidden">
-
 <div class="title">
 <h2>About Me</h2>
 </div>
-
 <p>
 Halo! Saya Seorang Siswa Dari SMKN 2 BANJARMASIN Dengan Jurusan TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI Saya Sekarang Berumur 17 Tahun Hobi Saya Yaitu Badminton Dan Mendaki
 Cita Cita Saya Menjadi Pengusaha Dan Saya Lahir Di BANJARMASIN Pada Tanggal 07-12-2008 Mungkin Itu Saja Tentang Diri Saya.
 </p>
-
 </section>
 
 <section id="skills" class="hidden">
-
 <div class="title">
 <h2>Skills</h2>
 </div>
-
 <div class="cards">
-
 <div class="card">
 <h3>Topologi FTTH</h3>
-<p>Menyambung Kabel Fiber Atau Kabel KU</p>
-<p>Konfigurasi Mikrotik Dan CCTV</p>
+<p>Menyambung Kabel KU Dan Membuat Kabel Dropcore</p>
+<p>Konfigurasi Mikrotik,Access Point Dan CCTV,ONT</p>
 </div>
-
 <div class="card">
 <h3>Software</h3>
 <p>Install Ulang PC</p>
-<p>Memahami Debian Server</p>
+<p>Memahami Server Distro Linux</p>
 <p>Memahami Cloud AWS</p>
 </div>
-
 <div class="card">
 <h3>Hardware</h3>
-<p>Me Rakit PC</p>
+<p>Rakit PC</p>
 <p>Cleaning PC</p>
 <p>Re-Pasta PC</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="projects" class="hidden">
-
 <div class="title">
 <h2>Projects</h2>
 </div>
-
 <div class="cards">
-
 <div class="card">
 <h3>GITHUB</h3>
 <p>Membuat Akun GITHUB Yang Aktif</p>
 </div>
-
 <div class="card">
 <h3>Cloud AWS</h3>
 <p>Memahami Machine Learning</p>
+<p>Memahami CI/CD</p>
+<p>Membuat Website Full Stack</p>
 </div>
-
 <div class="card">
-<h3>Debian Server</h3>
-<p>Memahami Dasar Server</p>
+<h3>Server Distro Linux</h3>
+<p>Memahami Server</p>
+<p>Memahami DNS,Webserver,Dan WazuhServer</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="contact" class="hidden">
-
-<div class="title">
-
 <div class="title">
 <h2>Contact</h2>
 </div>
-
 <div class="card" style="max-width:500px;margin:auto;text-align:center;">
 <p>📧 Email: adityaraihan888@gmail.com</p>
 <p>📱 Instagram: @han.ap_</p>
 <p>💬 Tiktok: synctink</p>
 </div>
-
-</section>
-
 </section>
 
 <footer>
@@ -460,7 +414,6 @@ Cita Cita Saya Menjadi Pengusaha Dan Saya Lahir Di BANJARMASIN Pada Tanggal 07-1
 </footer>
 
 <script>
-
 const hiddenElements = document.querySelectorAll('.hidden');
 
 const observer = new IntersectionObserver((entries)=>{
@@ -478,7 +431,6 @@ observer.observe(el);
 const btn = document.getElementById("darkBtn");
 
 btn.addEventListener("click",()=>{
-
 document.body.classList.toggle("dark");
 
 if(document.body.classList.contains("dark")){
@@ -486,9 +438,7 @@ btn.innerHTML="☀️";
 }else{
 btn.innerHTML="🌙";
 }
-
 });
-
 </script>
 
 </body>
